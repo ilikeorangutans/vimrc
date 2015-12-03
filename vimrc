@@ -31,12 +31,18 @@ set nostartofline
 set laststatus=2
 set confirm
 set mouse=a
-set cmdheight=2
+set cmdheight=3
 set pastetoggle=<F11>
 
 set shiftwidth=4
 set tabstop=4
 set grepprg=ag\ --nogroup\ --nocolor
+set backup
+set backupdir=~/tmp
+set directory=~/tmp
+set cursorline
+set relativenumber
+set history=10000
 
 let mapleader=","
 
@@ -70,3 +76,6 @@ let g:go_highlight_build_constraints = 1
 "colorscheme hybrid
 colorscheme corporation
 
+set shell=/bin/bash
+
+nmap <c-s> <esc>:w<CR>
