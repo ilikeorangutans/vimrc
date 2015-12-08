@@ -8,9 +8,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-rails'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'JazzCore/ctrlp-cmatcher'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -34,8 +37,9 @@ set mouse=a
 set cmdheight=3
 set pastetoggle=<F11>
 
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
+set expandtab
 set grepprg=ag\ --nogroup\ --nocolor
 set backup
 set backupdir=~/tmp
@@ -48,6 +52,10 @@ let mapleader=","
 
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_max_files = 100000
+let g:ctrlp_max_height = 30
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 
@@ -73,8 +81,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-"colorscheme hybrid
-colorscheme corporation
+colorscheme hybrid
 
 set shell=/bin/bash
 
