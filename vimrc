@@ -13,6 +13,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'rking/ag.vim'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,8 +44,9 @@ set tabstop=2
 set expandtab
 set grepprg=ag\ --nogroup\ --nocolor
 set backup
-set backupdir=~/tmp
-set directory=~/tmp
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 set cursorline
 set relativenumber
 set history=10000
@@ -86,3 +89,17 @@ colorscheme hybrid
 set shell=/bin/bash
 
 nmap <c-s> <esc>:w<CR>
+nnoremap K :Ag '<C-R><C-W>'<CR>
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+
+nnoremap <silent> [b :bprevious
+nnoremap <silent> ]b :bnext
