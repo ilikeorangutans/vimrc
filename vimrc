@@ -54,11 +54,11 @@ set history=10000
 
 let mapleader=","
 
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_max_files = 100000
 let g:ctrlp_max_height = 30
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+let g:ctrlp_extensions = ['tag']
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -85,10 +85,9 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
 let g:go_fmt_command = "goimports"
 
-colorscheme hybrid
+colorscheme corporation
 
 set shell=/bin/bash
 
@@ -107,3 +106,4 @@ nnoremap <c-l> <c-w>l
 
 nnoremap <silent> [b :bprevious
 nnoremap <silent> ]b :bnext
+
