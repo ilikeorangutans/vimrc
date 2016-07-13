@@ -5,6 +5,9 @@ if has('unix')
     set guifont=Fira_Code:h13
     set macligatures
     set shell=/bin/bash
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
   else
   endif
 endif
