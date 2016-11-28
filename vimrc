@@ -15,6 +15,7 @@ Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'rking/ag.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
