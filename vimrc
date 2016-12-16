@@ -16,6 +16,7 @@ Plugin 'rking/ag.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-surround'
+Plugin 'ludovicchabant/vim-gutentags'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
