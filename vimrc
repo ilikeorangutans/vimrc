@@ -108,3 +108,7 @@ nnoremap <c-l> <c-w>l
 nnoremap <silent> [b :bprevious
 nnoremap <silent> ]b :bnext
 
+augroup filetype_lua
+  autocmd!
+  autocmd FileType lua setlocal  iskeyword+=:
+augroup END
