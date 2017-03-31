@@ -55,17 +55,12 @@ set history=10000
 
 let mapleader=","
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+let g:ctrlp_use_caching = 0
 let g:ctrlp_max_files = 100000
 let g:ctrlp_max_height = 30
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_extensions = ['tag']
-
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -110,5 +105,5 @@ nnoremap <silent> ]b :bnext
 
 augroup filetype_lua
   autocmd!
-  autocmd FileType lua setlocal  iskeyword+=:
+  autocmd FileType lua setlocal iskeyword+=:
 augroup END
